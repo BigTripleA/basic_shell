@@ -6,13 +6,13 @@ Shellinus is a simple custom shell script that allows users to execute various c
 
 1. Run the script in a terminal:
 
-   \`\`\`bash
+   ``` bash
    ./shellinus.sh
-   \`\`\`
+   ```
 
 2. Enter commands with optional arguments and options.
 
-   \`\`\`bash
+   ```bash
    shellinus> list -detailed
    shellinus> edit filename.txt
    shellinus> cd /path/to/directory
@@ -20,13 +20,13 @@ Shellinus is a simple custom shell script that allows users to execute various c
    shellinus> calculate 5 + 3
    shellinus> create new_file.txt
    shellinus> show existing_file.txt
-   \`\`\`
+   ```
 
 3. To exit the shell, type:
 
-   \`\`\`bash
+   ```bash
    shellinus> exit
-   \`\`\`
+   ```
 
 ## Commands and Options
 
