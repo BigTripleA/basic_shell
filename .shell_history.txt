@@ -1,7 +1,0 @@
-cat command-history.txt
-cat command_history.txt
-clc
-ls
-ls
-pwd
-cd ..

@@ -1,7 +1,0 @@
-Command history at 2023-12-20 00:37:25:
-ls
-ls
-ls
-ls -l
-ls -al
-save-history
