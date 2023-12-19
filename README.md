@@ -1,63 +1,63 @@
-echo "# Shellinus - Custom Shell Script
+# Shellinus - An Interactive Shell for Linux
 
-Shellinus is a simple custom shell script that allows users to execute various commands with user-friendly options.
+**Welcome to Shellinus!**
 
-## Usage
+Shellinus is an interactive and easy-to-use shell for Linux. It provides a user-friendly interface to execute commands and perform various tasks.
 
-1. Run the script in a terminal:
+## Features
 
-   ``` bash
-   ./shellinus.sh
-   ```
+- **User-Friendly Commands:** Shellinus supports a variety of user-friendly commands for common tasks.
 
-2. Enter commands with optional arguments and options.
+- **Command History:** The shell keeps track of command history, making it easy to review and recall previous commands.
 
-   ```bash
-   shellinus> list -detailed
-   shellinus> edit filename.txt
-   shellinus> cd /path/to/directory
-   shellinus> print -uppercase \"Hello, World!\"
-   shellinus> calculate 5 + 3
-   shellinus> create new_file.txt
-   shellinus> show existing_file.txt
-   ```
+- **Options and Arguments:** Users can provide options and arguments with commands to customize their behavior.
 
-3. To exit the shell, type:
+## Getting Started
 
-   ```bash
-   shellinus> exit
-   ```
+1. **Clone the Repository:**
 
-## Commands and Options
+    ```bash
+    git clone https://github.com/your-username/shellinus.git
+    cd shellinus
+    ```
 
-- **list**: List files in the current directory.
+2. **Run the Shell:**
 
-  - \`-detailed\`: Show detailed information (equivalent to \`ls -l\`).
+    ```bash
+    ./shellinus.sh
+    ```
 
-- **edit**: Open a text file for editing using the Nano text editor.
+3. **Explore Commands:**
 
-- **cd**: Change the current directory.
+    Use the shell prompt to enter commands. For example:
 
-- **print**: Print a message to the console.
+    ```bash
+    shellinus> list -detailed
+    ```
 
-  - \`-uppercase\`: Print the message in uppercase.
+## Commands
 
-- **calculate**: Perform basic arithmetic calculations.
+- **list:** List files and directories.
+- **edit:** Open a text editor (nano) for file editing.
+- **cd:** Change directory.
+- **print:** Print text.
+- **calculate:** Perform basic calculations.
+- **create:** Create a new file.
+- **show:** Display the contents of a file.
+- **open-memory:** Open a memory management application (Python required).
+- **check-network:** Check network status (Python required).
+- **date-time:** Display the current date and time.
+- **disk-usage:** Show disk usage information.
+- **free-memory:** Display free memory information.
+- **system-info:** Show system information.
+- **save-history:** Save command history.
 
-- **create**: Create a new empty file.
+## Notes
 
-- **show**: Display the content of an existing file.
+- For some commands, additional software may be required (e.g., Python for memory and network management).
 
-- **Other Commands**: Shellinus supports other standard commands. If a command is not explicitly handled, it will be executed as-is.
+- To exit the shell, type `exit`.
 
-## Additional Notes
+- You can also use all of commands in `Linux`!
 
-- Commands are case-sensitive.
-- Options can be combined with the command, e.g., \`list -detailed\`.
-- Use double quotes for arguments with spaces, e.g., \`print \"Hello, World!\"\`.
-
-## Error Handling
-
-- If an entered command is not found, an error message will be displayed.
-
-Feel free to customize and extend this script according to your needs." > README.md
+Feel free to explore and customize Shellinus for your needs!

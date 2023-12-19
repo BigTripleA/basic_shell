@@ -1,5 +1,11 @@
 #!/bin/bash
 
+shell_history_file=".shell_history.txt"
+command_history_file="command_history.txt"
+
+clear
+echo -e "Welcome to Shellinus! An interactive and easy-to-use shell for linux!\n"
+
 while true; do
     # Display the shell prompt in red
     echo -ne "\e[31mshellinus>\e[0m "
@@ -12,6 +18,9 @@ while true; do
         echo "Exiting shell. Goodbye!"
         break
     fi
+
+    # Save history
+    echo "$command_with_options" >> "$shell_history_file"
 
     # Extract command and options
     command=$(echo "$command_with_options" | awk '{print $1}')
@@ -49,14 +58,14 @@ while true; do
             nano "$arguments"
             ;;
         "cd")
-            cd $arguments && pwd
+            cd "$arguments" && pwd
             continue
             ;;
         "print")
             system_command="echo $options $arguments"
             ;;
         "calculate")
-            echo $arguments
+            echo "$arguments"
             system_command="echo $arguments | bc"
             ;;
         "create")
@@ -66,6 +75,32 @@ while true; do
             ;;
         "show")
             system_command="cat $arguments"
+            ;;
+        "open-memory")
+            system_command="python3 Memory_Manager.py"
+            ;;
+        "check-network")
+            system_command="python3 Network_Manager.py"
+            ;;
+        "date-time")
+            system_command="date"
+            ;;
+        "disk-usage")
+            system_command="df -h"
+            ;;
+        "free-memory")
+            system_command="free -h"
+            ;;
+        "system-info")
+            system_command="uname -a"
+            ;;
+        "save-history")
+            current_datetime=$(date "+%Y-%m-%d %H:%M:%S")
+            echo "Command history at $current_datetime:" >> "$command_history_file"
+            cat "$shell_history_file" >> "$command_history_file"
+            rm "$shell_history_file"
+            echo "Shell history saved to $command_history_file."
+            continue
             ;;
         *)
             if ! command -v "$command" &> /dev/null; then
