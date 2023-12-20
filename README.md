@@ -51,6 +51,7 @@ Shellinus is an interactive and easy-to-use shell for Linux. It provides a user-
 - **free-memory:** Display free memory information.
 - **system-info:** Show system information.
 - **save-history:** Save command history.
+- **translate:** translate text from a file to any language.
 
 ## Notes
 

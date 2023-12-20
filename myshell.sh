@@ -102,6 +102,26 @@ while true; do
             echo "Shell history saved to $command_history_file."
             continue
             ;;
+        "translate")
+            if [[ $options =~ -[a-zA-Z]*:[a-zA-Z]* ]]; then
+                lang_options=$(echo $options | sed -n 's/.*\(-[a-zA-Z]*:[a-zA-Z]*\).*/\1/p')
+                source_lang=$(echo $lang_options | sed 's/^-//' | awk -F: '{print $1}')
+                dest_lang=$(echo $lang_options | awk -F: '{print $2}')
+            fi
+
+
+            if [ -z "$source_lang" ] || [ -z "$dest_lang" ]; then
+                echo "Error: Please provide both source and destination languages."
+                continue
+            fi
+            
+            translated_file="${arguments%.*}-translation.txt"
+            translated_file="${translated_file// /}"
+            
+            trans -b "$source_lang":"$dest_lang" -i $arguments -o $translated_file
+            echo "Translation complete. Output written to $translated_file."
+            continue
+            ;;
         *)
             if ! command -v "$command" &> /dev/null; then
                 echo "Error: Command not found - $command"
