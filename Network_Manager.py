@@ -7,7 +7,6 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationTool
 import subprocess
 from ttkbootstrap import Style
 import json
-import os
 
 
 class NetworkMonitor:
@@ -17,8 +16,7 @@ class NetworkMonitor:
         self.root.title("Network Monitor")
         # style
         style = Style(theme='superhero')
-        path = os.path.dirname(os.path.realpath(__file__))
-        f = open(str(path)+ '\\theme.json', 'r')
+        f = open('theme.json', 'r')
         theme = json.load(f)
         st = ttk.Style()
         st.theme_create('MyStyle', settings=theme)
