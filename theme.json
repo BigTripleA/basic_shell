@@ -1,0 +1,6 @@
+{
+  "TFrame": {"configure": {"background": "#f2f2f2"}},"TNotebook": {"configure": {"background": "#BEBEBE", "tabmargins": [2, 5, 2, 0], "padding": [7, 2]}},
+  "TNotebook.Tab": {"configure": {"background": "#BEBEBE", "padding": [10, 5], "focuscolor": "clear", "font": "Helvetica 12 bold"}},
+  "TLabel": {"configure": {"background": "f2f2f2", "font": "courier 30 bold"}, "inpadx":  "10"},
+  "TEntry": {"configure": {"font": "Helvetica 12 bold"}}
+}
