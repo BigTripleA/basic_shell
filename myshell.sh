@@ -65,8 +65,8 @@ while true; do
             system_command="echo $options $arguments"
             ;;
         "calculate")
-            echo "$arguments"
-            system_command="echo $arguments | bc"
+            echo "$arguments" 
+            system_command="echo \"$arguments\" | bc -l"      
             ;;
         "create")
             # Create a file with the specified name
